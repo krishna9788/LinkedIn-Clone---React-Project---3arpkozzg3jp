@@ -149,30 +149,30 @@ const Login = () => {
             </p>
           </div>
           <div className="footer">
-            <div className="sign_footer">
+            <div className="sign_footer font_size">
               <p>
                 Linked<span className="logo_footer">in</span>@2023
               </p>
             </div>
-            <div className="foot">
+            <div className="foot font_size">
               <p>User Agreement</p>
             </div>
-            <div className="foot">
+            <div className="foot font_size">
               <p>Privacy Policy</p>
             </div>
-            <div className="foot">
+            <div className="foot font_size">
               <p>Community Guidelines</p>
             </div>
-            <div className="foot">
+            <div className="foot font_size">
               <p>Cookie Policy</p>
             </div>
-            <div className="foot">
+            <div className="foot font_size">
               <p>Copyright Policy</p>
             </div>
-            <div className="foot">
+            <div className="foot font_size">
               <p>Send Feedback</p>
             </div>
-            <div className="foot lang">
+            <div className="foot lang font_size">
               <p>
                 Language
                 <select>
@@ -195,7 +195,7 @@ const Login = () => {
 
           <div className="register_content">
             <div>
-              <label className="register_font_size" htmlFor="name">
+              <label className="register_font_size font_size" htmlFor="name">
                 Name
               </label>
               <input
@@ -211,7 +211,7 @@ const Login = () => {
               />
             </div>
             <div>
-              <label className="register_font_size" htmlFor="email">
+              <label className="register_font_size font_size" htmlFor="email">
                 Email or Phone
               </label>
               <input
@@ -227,7 +227,10 @@ const Login = () => {
               />
             </div>
             <div>
-              <label className="register_font_size" htmlFor="password">
+              <label
+                className="register_font_size font_size"
+                htmlFor="password"
+              >
                 Password (6 or more characters)
               </label>
               <input
@@ -242,16 +245,16 @@ const Login = () => {
                 required
               />
             </div>
-            <div className="error">
+            <div className="error font_size">
               {errorRegister ? (
                 <p>Please Enter A Valid Name, Email & Password</p>
               ) : (
                 ""
               )}
             </div>
-            <div className="terms">
-              <p className="register_font_size">
-                By clicking Agree & Join, you agree to the LinkedIn&nbsp;
+            <div className="terms ">
+              <p className="register_font_size font_size">
+                By clicking Agree & Join, you agree to LinkedIn&nbsp;
                 <span className="register_font">User Agreement</span>,
                 <span className="register_font">Privacy Policy</span>, and&nbsp;
                 <span className="register_font">Cookie Policy</span>.
@@ -286,36 +289,36 @@ const Login = () => {
             </div>
           </div>
           <div className="new_user">
-            <p className="register_font_size">
+            <p className="business_font">
               Looking to create a page for a business?&nbsp;
               <span className="register_font">Get help</span>
             </p>
           </div>
           <div className="footer">
-            <div className="sign_footer">
+            <div className="sign_footer font_size">
               <p>
                 Linked<span className="logo_footer">in</span>@2023
               </p>
             </div>
-            <div className="foot">
+            <div className="foot font_size">
               <p>User Agreement</p>
             </div>
-            <div className="foot">
+            <div className="foot font_size">
               <p>Privacy Policy</p>
             </div>
-            <div className="foot">
+            <div className="foot font_size">
               <p>Community Guidelines</p>
             </div>
-            <div className="foot">
+            <div className="foot font_size">
               <p>Cookie Policy</p>
             </div>
-            <div className="foot">
+            <div className="foot font_size">
               <p>Copyright Policy</p>
             </div>
-            <div className="foot">
+            <div className="foot font_size">
               <p>Send Feedback</p>
             </div>
-            <div className="foot lang">
+            <div className="foot lang font_size">
               <p>
                 Language
                 <select>

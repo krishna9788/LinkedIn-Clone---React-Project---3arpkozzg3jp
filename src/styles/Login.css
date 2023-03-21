@@ -214,6 +214,7 @@
     margin-bottom: 20px;
     text-align: center;
 }
+
 .rd{
     width: 352px;
     height: 36px;
@@ -283,3 +284,11 @@
 .login{
     background: rgb(248, 245, 245);
     }
+
+.font_size{
+    font-size: 15px;
+}
+
+.business_font{
+    font-size: 13px;
+}
