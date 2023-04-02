@@ -128,12 +128,12 @@ const Login = () => {
               <div className="line"></div> <span className="orp">or</span>
               <div className="line"></div>
             </div>
-            <div>
+            {/* <div>
               <button className="btn btn2 google_button wd">
                 <span className="Signin_Font">Sign in with Google</span>
                 <img width={"40px"} src={google}></img>
               </button>
-            </div>
+            </div> */}
           </div>
           <div className="new_user">
             <p>
@@ -268,12 +268,12 @@ const Login = () => {
                 Agree & Join
               </button>
             </div>
-            <div className="register_apple_login">
+            {/* <div className="register_apple_login">
               <button className="register_btn google_button register_btn2">
                 <span className="Signin_Font">Register with Google</span>
                 <img width={"40px"} src={google}></img>
               </button>
-            </div>
+            </div> */}
             <div className="already_user">
               <p>
                 Already on LinkedIn?&nbsp;
