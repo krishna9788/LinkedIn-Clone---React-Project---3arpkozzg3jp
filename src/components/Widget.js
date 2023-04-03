@@ -1,7 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import "./../styles/Widget.css";
 
 const Widget = () => {
+  const [value, setValue] = useState(true);
+  const [value1, setValue1] = useState(true);
+  const [value2, setValue2] = useState(true);
+  const [value3, setValue3] = useState(true);
+  const [value4, setValue4] = useState(true);
+  const [value5, setValue5] = useState(true);
+  const [value6, setValue6] = useState(true);
+  const [value7, setValue7] = useState(true);
+  const handleClick1 = () => {
+    setValue1(!value1);
+  };
+  const handleClick2 = () => {
+    setValue2(!value2);
+  };
+  const handleClick = () => {
+    setValue(!value);
+  };
+  const handleClick3 = () => {
+    setValue3(!value3);
+  };
+  const handleClick4 = () => {
+    setValue4(!value4);
+  };
+  const handleClick5 = () => {
+    setValue5(!value5);
+  };
+  const handleClick6 = () => {
+    setValue6(!value6);
+  };
+  const handleClick7 = () => {
+    setValue7(!value7);
+  };
   return (
     <div className="widgets libd">
       <div className="widgets__header">
@@ -17,10 +49,13 @@ const Widget = () => {
           <p>Top news - 4000 readers</p>
         </div>
       </div>
+      {/* add follow and unfollow button */}
       <div className="follow">
-        <p className="follow_text">+ Follow</p>
+        <button className="follow_text" onClick={handleClick1}>
+          {value1 ? "+ Follow" : "Unfollow"}
+        </button>
       </div>
-      
+
       <div className="widgets__article">
         <div className="widgets__article--left">
           <i className="material-icons"> fiber_manual_record </i>
@@ -31,7 +66,9 @@ const Widget = () => {
         </div>
       </div>
       <div className="follow">
-        <p className="follow_text">+ Follow</p>
+        <button className="follow_text" onClick={handleClick2}>
+          {value2 ? "+ Follow" : "Unfollow"}
+        </button>
       </div>
 
       <div className="widgets__article">
@@ -44,9 +81,10 @@ const Widget = () => {
         </div>
       </div>
       <div className="follow">
-        <p className="follow_text">+ Follow</p>
+        <button className="follow_text" onClick={handleClick}>
+          {value ? "+ Follow" : "Unfollow"}
+        </button>
       </div>
-
       <div className="widgets__article">
         <div className="widgets__article--left">
           <i className="material-icons"> fiber_manual_record </i>
@@ -57,7 +95,9 @@ const Widget = () => {
         </div>
       </div>
       <div className="follow">
-        <p className="follow_text">+ Follow</p>
+        <button className="follow_text" onClick={handleClick3}>
+          {value3 ? "+ Follow" : "Unfollow"}
+        </button>
       </div>
 
       <div className="widgets__article">
@@ -70,7 +110,9 @@ const Widget = () => {
         </div>
       </div>
       <div className="follow">
-        <p className="follow_text">+ Follow</p>
+        <button className="follow_text" onClick={handleClick4}>
+          {value4 ? "+ Follow" : "Unfollow"}
+        </button>
       </div>
 
       <div className="widgets__article">
@@ -83,7 +125,9 @@ const Widget = () => {
         </div>
       </div>
       <div className="follow">
-        <p className="follow_text">+ Follow</p>
+        <button className="follow_text" onClick={handleClick5}>
+          {value5 ? "+ Follow" : "Unfollow"}
+        </button>
       </div>
 
       <div className="widgets__article">
@@ -96,7 +140,9 @@ const Widget = () => {
         </div>
       </div>
       <div className="follow">
-        <p className="follow_text">+ Follow</p>
+        <button className="follow_text" onClick={handleClick6}>
+          {value6 ? "+ Follow" : "Unfollow"}
+        </button>
       </div>
 
       <div className="widgets__article">
@@ -109,7 +155,9 @@ const Widget = () => {
         </div>
       </div>
       <div className="follow">
-        <p className="follow_text">+ Follow</p>
+        <button className="follow_text" onClick={handleClick7}>
+          {value7 ? "+ Follow" : "Unfollow"}
+        </button>
       </div>
     </div>
   );
