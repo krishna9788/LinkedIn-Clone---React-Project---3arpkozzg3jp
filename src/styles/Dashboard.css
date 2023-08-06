@@ -306,13 +306,7 @@
   margin: 0 5px;
 }
 
-/* @media screen and (max-width: 464px) {
-  
-  .dashboard_user {
-        display: ;
-      }
-  
-} */
+
 @media screen and (min-width: 0px) and (max-width: 664px) {
   .dashboard_user { display: block; }  /* show it on small screens */
 }
@@ -440,4 +434,27 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+@media screen and (max-width: 414px) {
+  
+  .navbar___div{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* padding-left: 10px; */
+}
+.input__option {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    color: #455362;
+    padding: 4px;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+.feed{
+  width: 100%;
+}
+  
 }
