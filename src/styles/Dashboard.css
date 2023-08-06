@@ -329,12 +329,13 @@
   height: auto;
   flex-direction: column;
   margin: 0px 20px;
+  border-radius: 10px;
 }
 .navbar___div{
-  width: 406px;
+  width: 406.8px;
   display: flex;
   flex-direction: column;
-  padding-left: 10px;
+  /* padding-left: 10px; */
 }
 .detail__user{
   display: flex;
