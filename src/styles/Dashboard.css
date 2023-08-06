@@ -305,3 +305,138 @@
   content: "·";
   margin: 0 5px;
 }
+
+/* @media screen and (max-width: 464px) {
+  
+  .dashboard_user {
+        display: ;
+      }
+  
+} */
+@media screen and (min-width: 0px) and (max-width: 664px) {
+  .dashboard_user { display: block; }  /* show it on small screens */
+}
+
+@media screen and (min-width: 664px) and (max-width: 4024px) {
+  .dashboard_user { display: none; }   /* hide it elsewhere */
+}
+
+
+.navbar_containeer{
+  display: flex;
+  background-color: white;
+  width: auto;
+  height: auto;
+  flex-direction: column;
+  margin: 0px 20px;
+}
+.navbar___div{
+  width: 406px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+}
+.detail__user{
+  display: flex;
+  border: 1px solid gainsboro;
+  flex-direction: column;
+  border-radius: 10px;
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+}
+.detail_Username{
+  font-size: 20px;
+  font-weight: bold;
+}
+.deslist{
+  padding: 10px;
+  text-align: center;
+}
+.jobs_container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid gainsboro;
+  margin: 10px 0px 10px 10px;
+}
+.imagejobs_width{
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+}
+.image_container{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  height: 50px;
+  margin-bottom: 16px;
+  
+}
+.pad_-left{
+  padding-left: 5px;
+}
+.pad_-leftfg{
+  padding: 10px;
+}
+.para_head{
+  color: #0177b7;
+  font-weight: bold;
+  font-size: 15px;
+}
+.para_text{
+  font-size: 15px;
+  font-weight: 300;
+}
+.para_detail{
+  font-size: 10px;
+}
+.jobs__heading{
+  font-size: 25px;
+}
+.pad_-leftffont{
+  font-size: 50px;
+}
+.para_head_black{
+  color: black;
+  font-weight: bold;
+  font-size: 15px;
+}
+.pad_-leftfg_button{
+  border: 1px solid grey;
+  border-radius: 20px;
+  margin-right: 5px;
+  padding: 5px;
+
+}
+.mynetwork_container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid gainsboro;
+  margin: 10px 0px 10px 10px;
+}
+.mynetwork_text{
+  margin-top: 30px;
+  font-size: 8px;
+}
+.mynetwork_textd{
+  margin-top: 5px;
+  font-size: 8px;
+}
+.mynetwork_button{
+  border: 1px solid gray;
+  color: #0177b7;
+  border-radius: 15px;
+  margin: 5px 0px 10px 0px;
+  padding: 5px;
+}
+.left_mynetwork_container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

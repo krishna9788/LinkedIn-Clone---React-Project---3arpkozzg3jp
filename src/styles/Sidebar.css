@@ -41,7 +41,7 @@
 .sidebar__stat {
   margin-top: 10px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .sidebar__stat > p {
@@ -60,7 +60,14 @@
   font-size: 12px;
   margin-top: 5px;
 }
-
+@media screen and (max-width: 664px) {
+  
+  .sidebar{
+    display: none;
+  }
+  
+  
+}
 .sidebar__top > h2 {
   font-size: 18px;
 }

@@ -1,9 +1,29 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import "./../styles/Sidebar.css";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   const user = useSelector((state) => state.user.value);
+  const handleDeveloper = () => {
+    window.open("https://developers.google.com/");
+  };
+  const handleDesign = () => {
+    window.open(
+      "https://medium.com/@Vincentxia77/beginners-guide-how-to-learn-web-designing-at-home-796c01b8c0c2/"
+    );
+  };
+  const handleSoftwareEngineering = () => {
+    window.open(
+      "https://resources.workable.com/software-engineer-job-description/"
+    );
+  };
+  const handleProgramming = () => {
+    window.open("https://www.coursera.org/articles/what-is-programming/");
+  };
+  const handleReactjs = () => {
+    window.open("https://legacy.reactjs.org/");
+  };
   return (
     <div className="sidebar">
       <div className="sidebar__top libd">
@@ -33,23 +53,23 @@ const Sidebar = () => {
         <p>Recent</p>
         <div className="sidebar__recent--item">
           <span className="sidebar__hash">#</span>
-          <p>reactjs</p>
+          <p onClick={handleReactjs}>reactjs</p>
         </div>
         <div className="sidebar__recent--item">
           <span className="sidebar__hash">#</span>
-          <p>programming</p>
+          <p onClick={handleProgramming}>programming</p>
         </div>
         <div className="sidebar__recent--item">
           <span className="sidebar__hash">#</span>
-          <p>softwareengineering</p>
+          <p onClick={handleSoftwareEngineering}>softwareengineering</p>
         </div>
         <div className="sidebar__recent--item">
           <span className="sidebar__hash">#</span>
-          <p>design</p>
+          <p onClick={handleDesign}>design</p>
         </div>
         <div className="sidebar__recent--item">
           <span className="sidebar__hash">#</span>
-          <p>developer</p>
+          <p onClick={handleDeveloper}>developer</p>
         </div>
       </div>
     </div>

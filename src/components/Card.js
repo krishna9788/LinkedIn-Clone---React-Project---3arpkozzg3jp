@@ -1,32 +1,62 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import posts from "../mock_backend/Posts";
+import "./../styles/App.css";
 
 const Card = ({ e, display }) => {
   const user = useSelector((state) => state.user.value);
+  const [flag, setFlag] = useState(false);
+  const [bg, setBg] = useState('grey');
 
   const [comment, setComment] = useState("");
   const [toggleComment, setToggleComment] = useState(false);
+  const [togglesend, setToggleSend] = useState(false);
+  const [toggleshare, setToggleShare] = useState(false);
 
   const toggleLike = () => {
     console.log(e.likes);
     if (e.likes.has(user.name)) {
       e.likes.delete(user.name);
       posts[posts.indexOf(e)].likes.delete(user.name);
+      setBg('grey');
+      if (togglesend === true) {
+        setToggleSend(false);
+      }
+      if (toggleshare === true) {
+        setToggleShare(false);
+      }
     } else {
       e.likes.add(user.name);
       posts[posts.indexOf(e)].likes.add(user.name);
+      setBg('blue');
+      if (togglesend === true) {
+        setToggleSend(false);
+      }
+      if (toggleshare === true) {
+        setToggleShare(false);
+      }
     }
     display([...posts]);
   };
 
   const handleComment = () => {
-    posts[posts.indexOf(e)].comments.push({
-      name: user.name,
-      comment: comment,
-    });
-    display([...posts]);
-    setComment("");
+    console.log(comment);
+    if (comment === "") {
+      setFlag(true);
+      console.log("Please Comment")
+      console.log("true");
+    }
+    else {
+      setFlag(false)
+      console.log("false");
+      posts[posts.indexOf(e)].comments.push({
+        name: user.name,
+        comment: comment,
+      });
+      display([...posts]);
+      setComment("");
+    }
+    
   };
 
   return (
@@ -91,7 +121,7 @@ const Card = ({ e, display }) => {
               className="post__engagement_input"
               type="text"
               value={comment}
-              placeholder="Write A Comment"
+              placeholder="write a comment"
               onChange={(e) => {
                 setComment(e.target.value);
               }}
@@ -101,11 +131,17 @@ const Card = ({ e, display }) => {
         ) : (
           ""
         )}
+        <div className="error">{flag ? <p>please write</p> : ""}</div>
+        <div className="working_on_div">
+          {togglesend ? <p>working on send festures</p> : ""}
+        </div>
+        <div className="working_on_div">
+          {toggleshare ? <p>working on share festures</p> : ""}
+        </div>
       </div>
-
       <div className="feed__input--options">
         <div className="input__option" onClick={toggleLike}>
-          <i style={{ color: "gray" }} className="material-icons">
+          <i style={{ color: bg }} className="material-icons">
             {" "}
             thumb_up{" "}
           </i>
@@ -115,6 +151,12 @@ const Card = ({ e, display }) => {
           className="input__option"
           onClick={() => {
             setToggleComment(!toggleComment);
+            if (togglesend === true) {
+              setToggleSend(false);
+            }
+            if (toggleshare === true) {
+              setToggleShare(false);
+            }
           }}
         >
           <i style={{ color: "gray" }} className="material-icons">
@@ -123,14 +165,36 @@ const Card = ({ e, display }) => {
           </i>
           <h4>Comment</h4>
         </div>
-        <div className="input__option">
+        <div
+          className="input__option"
+          onClick={() => {
+            setToggleShare(!toggleshare);
+            if (togglesend === true) {
+              setToggleSend(false);
+            }
+            if (toggleComment === true) {
+              setToggleComment(false);
+            }
+          }}
+        >
           <i style={{ color: "gray" }} className="material-icons">
             {" "}
             share{" "}
           </i>
           <h4>Share</h4>
         </div>
-        <div className="input__option">
+        <div
+          className="input__option"
+          onClick={() => {
+            setToggleSend(!togglesend);
+            if (toggleshare === true) {
+              setToggleShare(false);
+            }
+            if (toggleComment === true) {
+              setToggleComment(false);
+            }
+          }}
+        >
           <i style={{ color: "gray" }} className="material-icons">
             {" "}
             send{" "}

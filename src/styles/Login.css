@@ -13,7 +13,7 @@
     font-size: 30px;
     font-weight: 600;
     padding-left: 50px;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
 }
 .logo_text{
     color: white;
@@ -144,9 +144,11 @@
     
 }
 
-
-
-.footer{
+@media screen and (min-width: 661px) {
+  /* body {
+    background-color: lightgreen;
+  } */
+  .footer{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -154,6 +156,20 @@
     height: fit-content;
     padding: 50px 30px 10px 30px;
 }
+}
+@media screen and (max-width: 661px) {
+
+    .footer{
+        display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+    padding: 50px 30px 10px 30px;
+}
+}
+
+
 
 .sign_footer{
     color: black;
@@ -216,7 +232,7 @@
 }
 
 .rd{
-    width: 352px;
+    width: 320px;
     height: 36px;
 }
 .already_user{

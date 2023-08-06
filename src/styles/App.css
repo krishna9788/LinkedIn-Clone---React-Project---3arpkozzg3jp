@@ -2,3 +2,12 @@
   padding: 0;
   margin: 0;
 }
+.working_on_div{
+  font-size: 25px;
+  color: rgb(95, 95, 97);
+}
+.working_on_div__pad{
+  text-align: center;
+  padding-top: 20px;
+  margin-left: 60px;
+}

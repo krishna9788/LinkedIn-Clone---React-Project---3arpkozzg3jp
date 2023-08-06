@@ -5,6 +5,19 @@
   margin-right: 10px;
 }
 
+@media screen and (max-width: 746px) {
+  h3{
+    display: none;
+  }
+}
+@media screen and (max-width: 439px) {
+  
+  .header__search > input::placeholder {
+        color: transparent;
+      }
+  
+}
+
 .header {
   width: 100%;
   display: flex;
@@ -101,4 +114,34 @@
   color: #fff;
   font-size: 14px;
   width: 100%;
+}
+
+.doropdown{
+  background-color: #eef3f8;
+  width: 150px;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-left: 78%;
+  margin-right: 22%;
+  
+}
+.doropdown ul {
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  color: grey;
+  font-size: 20px;
+  
+  
+}
+.doropdown ul li{
+  margin: 10px;
+  border-radius: 10px;
+
+}
+.doropdown ul li:hover{
+  color: #000;
 }

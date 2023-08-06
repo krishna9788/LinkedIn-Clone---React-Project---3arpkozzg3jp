@@ -8,6 +8,16 @@
   height: fit-content;
   padding-bottom: 10px;
 }
+@media screen and (max-width: 961px) {
+  
+  .hide_widgets{
+    display: none;
+  }
+  
+  
+}
+
+
 
 .widgets__header {
   display: flex;

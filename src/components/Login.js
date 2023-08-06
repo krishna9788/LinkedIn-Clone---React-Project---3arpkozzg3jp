@@ -27,7 +27,7 @@ const Login = () => {
             isLoggedIn: true,
           })
         );
-        navigate(`/dashboard/${userMap.get(username).id}`);
+        navigate(`/home`);
       } else {
         toggleErrorLogin(true);
       }
@@ -88,7 +88,7 @@ const Login = () => {
                 type={"text"}
                 id="email"
                 name="email"
-                placeholder="Email or Phone"
+                placeholder="Email"
                 value={username}
                 onChange={(e) => {
                   setUsername(e.target.value);
@@ -111,7 +111,7 @@ const Login = () => {
               />
             </div>
             <div className="error">
-              {errorLogin ? <p>Invalid Username Or Password</p> : ""}
+              {errorLogin ? <p>Please Join First</p> : ""}
             </div>
             <div className="forgot">
               <p>
@@ -128,6 +128,21 @@ const Login = () => {
               <div className="line"></div> <span className="orp">or</span>
               <div className="line"></div>
             </div>
+
+            <div className="new_user">
+              <p>
+                New to LinkedIn?{" "}
+                <span
+                  className="fontb"
+                  onClick={() => {
+                    setRegister(!register);
+                    toggleErrorLogin(false);
+                  }}
+                >
+                  Join now
+                </span>
+              </p>
+            </div>
             {/* <div>
               <button className="btn btn2 google_button wd">
                 <span className="Signin_Font">Sign in with Google</span>
@@ -135,7 +150,7 @@ const Login = () => {
               </button>
             </div> */}
           </div>
-          <div className="new_user">
+          {/* <div className="new_user">
             <p>
               New to LinkedIn?{" "}
               <span
@@ -147,7 +162,7 @@ const Login = () => {
                 Join now
               </span>
             </p>
-          </div>
+          </div> */}
           <div className="footer">
             <div className="sign_footer font_size">
               <p>
@@ -212,7 +227,7 @@ const Login = () => {
             </div>
             <div>
               <label className="register_font_size font_size" htmlFor="email">
-                Email or Phone
+                Email
               </label>
               <input
                 className="rd register_input"
