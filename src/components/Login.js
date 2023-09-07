@@ -6,15 +6,19 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { login } from "../features/Users";
 
-const Login = () => {
+const Login = ({ loading, handleLoading }) => {
+
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [register, setRegister] = useState(false);
   const [errorLogin, toggleErrorLogin] = useState(false);
-  const [errorRegister, toggleErrorRegister] = useState(false);
+  const [errorRegisterPassword, toggleErrorRegisterPassword] = useState(false);
+  const [errorRegisterName, toggleErrorRegisterName] = useState(false);
+  const [errorRegisterEmail, toggleErrorRegisterEmail] = useState(false);
   const [name, setName] = useState("");
   const navigate = useNavigate();
   const dispatch = useDispatch();
+
 
   const handleLogin = () => {
     if (userMap.has(username)) {
@@ -27,6 +31,7 @@ const Login = () => {
             isLoggedIn: true,
           })
         );
+        handleLoading();
         navigate(`/home`);
       } else {
         toggleErrorLogin(true);
@@ -42,15 +47,15 @@ const Login = () => {
       !username.includes("@") ||
       !username.includes(".")
     ) {
-      toggleErrorRegister(true);
+      toggleErrorRegisterEmail(true);
       return;
     }
     if (password.length < 6) {
-      toggleErrorRegister(true);
+      toggleErrorRegisterPassword(true);
       return;
     }
-    if (name.length < 3) {
-      toggleErrorRegister(true);
+    if (name.length <= 0) {
+      toggleErrorRegisterName(true);
       return;
     }
 
@@ -225,6 +230,9 @@ const Login = () => {
                 required
               />
             </div>
+            <div className="error font_size">
+              {errorRegisterName ? <p>Please enter name</p> : ""}
+            </div>
             <div>
               <label className="register_font_size font_size" htmlFor="email">
                 Email
@@ -240,6 +248,9 @@ const Login = () => {
                 }}
                 required
               />
+            </div>
+            <div className="error font_size">
+              {errorRegisterEmail ? <p>Please enter valid mail</p> : ""}
             </div>
             <div>
               <label
@@ -261,8 +272,8 @@ const Login = () => {
               />
             </div>
             <div className="error font_size">
-              {errorRegister ? (
-                <p>Please Enter A Valid Name, Email & Password</p>
+              {errorRegisterPassword ? (
+                <p>Please enter 6 digit password</p>
               ) : (
                 ""
               )}

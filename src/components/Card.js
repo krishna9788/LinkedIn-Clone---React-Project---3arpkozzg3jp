@@ -133,10 +133,10 @@ const Card = ({ e, display }) => {
         )}
         <div className="error">{flag ? <p>please write</p> : ""}</div>
         <div className="working_on_div">
-          {togglesend ? <p>working on send festures</p> : ""}
+          {togglesend ? <p>working on send features</p> : ""}
         </div>
         <div className="working_on_div">
-          {toggleshare ? <p>working on share festures</p> : ""}
+          {toggleshare ? <p>working on share features</p> : ""}
         </div>
       </div>
       <div className="feed__input--options">

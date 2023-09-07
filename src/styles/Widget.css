@@ -1,3 +1,4 @@
+
 /* widgets */
 .widgets {
   position: sticky;
@@ -69,6 +70,7 @@
   border-radius: 40px;
   font-size: 20px;
   text-align: center;
+  color: #0177b7;
   margin-top: 5px;
   border: 0.5px solid grey;
 }
