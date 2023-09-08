@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 import { logout } from "../features/Users";
 import { useNavigate } from "react-router-dom";
 
-const Navbar = ({ setHome, setMyNetwork, setJobs, setMessaging, setNotifications }) => {
+const Navbar = ({ setHome, setMyNetwork, setJobs, setMessaging, setNotifications}) => {
 
    const handleHome = () => {
      setHome(true);
@@ -46,6 +46,11 @@ const Navbar = ({ setHome, setMyNetwork, setJobs, setMessaging, setNotifications
     setJobs(false);
     setMessaging(false);
   }
+  const handleBusiness = () => {
+    window.open(
+      "https://in.indeed.com/jobs?q=Front+End+Web+Developer+Internship&vjk=67850a7d78dd5b5e&mna=&=&aceid=&gclid=CjwKCAjw5remBhBiEiwAxL2M98eFj404LUpuq7dU4VpGjTvbJiu140zSfur5jSPkvZZB0VaCcgmfhBoCdUkQAvD_BwE&gclsrc=aw.ds&from=mobRdr&utm_source=%2Fm%2F&utm_medium=redir&utm_campaign=dt/"
+    );
+  };
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -58,7 +63,8 @@ const Navbar = ({ setHome, setMyNetwork, setJobs, setMessaging, setNotifications
       <div className="header">
         <div className="header__nav">
           <div className="header__left">
-            <svg onClick={handleHome}
+            <svg
+              onClick={handleHome}
               xmlns="http://www.w3.org/2000/svgsvg"
               width="34"
               height="34"
@@ -116,7 +122,11 @@ const Navbar = ({ setHome, setMyNetwork, setJobs, setMessaging, setNotifications
               <div className="account__avatar">
                 <div className="account__avatar--img"></div>
               </div>
-              <h3>Logout</h3>
+              <h3>Me</h3>
+            </div>
+            <div className="header__option" onClick={handleBusiness}>
+              <i className="material-icons header__option--icon">apps </i>
+              <h3>For Business</h3>
             </div>
           </div>
         </div>

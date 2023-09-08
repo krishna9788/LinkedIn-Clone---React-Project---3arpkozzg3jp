@@ -1,7 +1,60 @@
 
+@media screen and (min-width: 1200px) {
+  .feed{
+    flex: 0.5;
+    width: 600px;
+    margin: 0 -70px;
+  }
+  .input__feed_style {
+    width: 412px;
+}
+.navbar___div {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+}
+.navbar_containeer {
+    display: flex;
+    background-color: white;
+    width: 600px;
+    height: auto;
+    flex-direction: column;
+    margin: 0px 20px;
+    border-radius: 10px;
+}
+  
+}
+@media screen and (max-width: 1200px) {
+  .feed {
+  flex: 0.5;
+  max-width: 560px;
+  margin: 0 20px;
+}
+.input__feed_style {
+    width: 320px;
+}
+.navbar___div {
+    width: 406.8px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+}
+.navbar_containeer {
+    display: flex;
+    background-color: white;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    margin: 0px 20px;
+    border-radius: 10px;
+}
+  
+}
 .dashboard {
   margin: 0;
   padding: 0;
+  height: 100vh;
   font-family: "Source Sans 3", sans-serif;
   background-color: #f3f2ef;
   display: flex;
@@ -68,11 +121,11 @@
 }
 
 /* Feed */
-.feed {
+/* .feed {
   flex: 0.5;
   max-width: 560px;
   margin: 0 20px;
-}
+} */
 .feed .account__avatar--img {
   height: 50px;
   width: 50px;
@@ -101,7 +154,7 @@
   margin-top: 5px;
   padding-left: 15px;
   margin-left: 10px;
-  width: 320px;
+  /* width: 320px; */
 }
 
 .feed__input > input {
@@ -326,7 +379,7 @@
 }
 
 
-.navbar_containeer{
+/* .navbar_containeer{
   display: flex;
   background-color: white;
   width: auto;
@@ -334,13 +387,13 @@
   flex-direction: column;
   margin: 0px 20px;
   border-radius: 10px;
-}
-.navbar___div{
+} */
+/* .navbar___div{
   width: 406.8px;
   display: flex;
   flex-direction: column;
-  /* padding-left: 10px; */
-}
+  padding-left: 10px;
+} */
 .detail__user{
   display: flex;
   border: 1px solid gainsboro;
@@ -519,6 +572,15 @@
   text-align: center;
 }
 
-/* .input__feed_style{
-  height: 10px;
-} */
+.input__feed_style{
+  flex: 0.9;
+  border: 1px solid lightgray;
+  border-radius: 30px;
+  padding: 10px;
+  color: gray;
+  cursor: pointer;
+  margin-top: 5px;
+  padding-left: 15px;
+  margin-left: 10px;
+  /* width: 320px; */
+}

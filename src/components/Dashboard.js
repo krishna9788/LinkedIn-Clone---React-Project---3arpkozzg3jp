@@ -167,18 +167,19 @@ const Dashboard = ({loading}) => {
                         <div className="account__avatar--img"></div>
                       </div>
                       <form onSubmit={handlePost}>
-                        <div className="feed__input" onClick={handleClikPost}>
+                        {/* <div className="feed__input" onClick={handleClikPost}> */}
                           <input
                             className="input__feed_style"
                             type="text"
                             value={post}
                             placeholder="Start a post"
+                            onClick={handleClikPost}
                             onChange={(e) => {
                               setPost(e.target.value);
                             }}
                           />
-                          <button type="submit">Send</button>
-                        </div>
+                          {/* <button type="submit">Send</button>
+                        </div> */}
                       </form>
                     </div>
                     <div className="error_post_div">

@@ -4,13 +4,28 @@
   height: 40px;
   margin-right: 10px;
 }
+@media screen and (min-width: 436px) {
+  .header__left {
+    margin-left: 60px;
+  }
+}
 
 @media screen and (max-width: 746px) {
   h3{
     display: none;
   }
 }
-@media screen and (max-width: 439px) {
+@media screen and (max-width: 472px) {
+  .header__left {
+    margin-left: 20px;
+    /* display: flex;
+    flex: 0.3; */
+    
+}
+  
+}
+
+@media screen and (max-width: 560px) {
   
   .header__search > input::placeholder {
         color: transparent;
@@ -38,7 +53,7 @@
   width: 1200px;
 }
 .header__left {
-  margin-left: 60px;
+  /* margin-left: 60px; */
   display: flex;
   flex: 0.3;
 }
