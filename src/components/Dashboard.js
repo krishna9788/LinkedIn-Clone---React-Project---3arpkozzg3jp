@@ -24,6 +24,28 @@ const Dashboard = ({loading}) => {
   const [togglevideo, setToggleVideo] = useState(false);
   const [toggleevent, setToggleEvent] = useState(false);
   const [togglewriteArticle, setToggleWriteArticle] = useState(false);
+  const [btn1, setBtn1] = useState(false);
+
+
+
+  const handleBtn1 = () => {
+    setBtn1(true);
+    setTimeout(() => {
+      setBtn1(false);
+    }, 1000);
+  }
+  const handleBtn2 = () => {
+    setBtn1(true);
+    setTimeout(() => {
+      setBtn1(false);
+    }, 1000);
+  }
+  const handleBtn3 = () => {
+    setBtn1(true);
+    setTimeout(() => {
+      setBtn1(false);
+    }, 1000);
+  }
 
   const handleDeveloper1 = () => {
     window.open(
@@ -168,17 +190,17 @@ const Dashboard = ({loading}) => {
                       </div>
                       <form onSubmit={handlePost}>
                         {/* <div className="feed__input" onClick={handleClikPost}> */}
-                          <input
-                            className="input__feed_style"
-                            type="text"
-                            value={post}
-                            placeholder="Start a post"
-                            onClick={handleClikPost}
-                            onChange={(e) => {
-                              setPost(e.target.value);
-                            }}
-                          />
-                          {/* <button type="submit">Send</button>
+                        <input
+                          className="input__feed_style"
+                          type="text"
+                          value={post}
+                          placeholder="Start a post"
+                          onClick={handleClikPost}
+                          onChange={(e) => {
+                            setPost(e.target.value);
+                          }}
+                        />
+                        {/* <button type="submit">Send</button>
                         </div> */}
                       </form>
                     </div>
@@ -449,8 +471,22 @@ const Dashboard = ({loading}) => {
                           <p className="mynetwork_text">
                             Based on your profile
                           </p>
-                          <button className="mynetwork_button">
-                            &#xf234; Connect
+                          <button
+                            className="mynetwork_button"
+                            onClick={handleBtn1}
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 16 16"
+                              data-supported-dps="16x16"
+                              fill="currentColor"
+                              class="mercado-match"
+                              width="16"
+                              height="16"
+                              focusable="false"
+                            >
+                              <path d="M9 4a3 3 0 11-3-3 3 3 0 013 3zM6.75 8h-1.5A2.25 2.25 0 003 10.25V15h6v-4.75A2.25 2.25 0 006.75 8zM13 8V6h-1v2h-2v1h2v2h1V9h2V8z"></path>
+                            </svg>{""}Connect
                           </button>
                         </div>
                       </div>
@@ -467,8 +503,22 @@ const Dashboard = ({loading}) => {
                           <p className="mynetwork_text">
                             Based on your profile
                           </p>
-                          <button className="mynetwork_button">
-                            &#xf234; Connect
+                          <button
+                            className="mynetwork_button"
+                            onClick={handleBtn2}
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 16 16"
+                              data-supported-dps="16x16"
+                              fill="currentColor"
+                              class="mercado-match"
+                              width="16"
+                              height="16"
+                              focusable="false"
+                            >
+                              <path d="M9 4a3 3 0 11-3-3 3 3 0 013 3zM6.75 8h-1.5A2.25 2.25 0 003 10.25V15h6v-4.75A2.25 2.25 0 006.75 8zM13 8V6h-1v2h-2v1h2v2h1V9h2V8z"></path>
+                            </svg>{""}Connect
                           </button>
                         </div>
                       </div>
@@ -483,12 +533,27 @@ const Dashboard = ({loading}) => {
                           <p className="mynetwork_text">
                             Based on your profile
                           </p>
-                          <button className="mynetwork_button">
-                            &#xf234; Connect
+                          <button
+                            className="mynetwork_button"
+                            onClick={handleBtn3}
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 16 16"
+                              data-supported-dps="16x16"
+                              fill="currentColor"
+                              class="mercado-match"
+                              width="16"
+                              height="16"
+                              focusable="false"
+                            >
+                              <path d="M9 4a3 3 0 11-3-3 3 3 0 013 3zM6.75 8h-1.5A2.25 2.25 0 003 10.25V15h6v-4.75A2.25 2.25 0 006.75 8zM13 8V6h-1v2h-2v1h2v2h1V9h2V8z"></path>
+                            </svg>{""}Connect
                           </button>
                         </div>
                       </div>
                     </div>
+                    {btn1 && (<p className="connect__working">Still we are working on this</p>)}
                   </div>
                 </div>
               </>
